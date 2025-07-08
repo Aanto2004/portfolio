@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aanto S | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', 'Inter', Arial, sans-serif; }
+  </style>
+</head>
+<body class="gradient-bg-dark min-h-screen text-gray-100 relative overflow-x-hidden">
+  <div class="bg-animated"></div>
+  <!-- Welcome Splash Page -->
+  <div id="welcomeSplash" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black bg-opacity-95 transition-opacity duration-700">
+    <img src="ProfilePhoto.JPG" alt="Profile Photo" class="w-40 h-40 rounded-full shadow-lg border-4 border-blue-400 object-cover mb-6 animate-fade-in-up">
+    <h1 class="text-4xl font-extrabold text-white mb-2 animate-fade-in-up" style="font-family:'Poppins',sans-serif;">Welcome!</h1>
+    <p class="text-lg text-blue-100 mb-6 animate-fade-in-up">I'm Aanto S. Explore my portfolio below.</p>
+    <button id="enterPortfolio" class="bg-gradient-to-r from-blue-500 to-green-400 text-white px-8 py-3 rounded-full font-bold text-xl shadow-lg hover:scale-105 transition-transform animate-fade-in-up">Enter Portfolio</button>
+  </div>
+
+  <!-- Sidebar Navigation -->
+  <aside class="fixed left-0 top-0 h-full w-20 z-40 flex flex-col items-center py-8 bg-black bg-opacity-90 shadow-lg backdrop-blur space-y-4 sidebar-nav">
+    <a href="#about" class="nav-link-card group" title="About">
+      <span class="material-icons nav-icon">person</span>
+    </a>
+    <a href="#projects" class="nav-link-card group" title="Projects">
+      <span class="material-icons nav-icon">apps</span>
+    </a>
+    <a href="#certifications" class="nav-link-card group" title="Certifications">
+      <span class="material-icons nav-icon">verified</span>
+    </a>
+    <a href="#experience" class="nav-link-card group" title="Experience">
+      <span class="material-icons nav-icon">work</span>
+    </a>
+    <a href="#contact" class="nav-link-card group" title="Contact">
+      <span class="material-icons nav-icon">mail</span>
+    </a>
+    <a href="#connect" class="nav-link-card group" title="Connect">
+      <span class="material-icons nav-icon">link</span>
+    </a>
+  </aside>
+  <header class="pt-24 pb-8 px-4 md:px-16 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start text-center md:text-left relative z-10 portfolio-content" style="display:none;">
+    <div class="flex items-center md:items-start justify-center md:justify-start space-x-4 w-full md:pl-8">
+      <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_kyu7xb1v.json" background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></lottie-player>
+      <div>
+        <h1 class="text-4xl font-extrabold text-white drop-shadow" style="font-family:'Poppins',sans-serif;">AANTO S</h1>
+        <p class="text-blue-100 font-semibold" style="font-family:'Inter',sans-serif;">Computer Science Student</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-8 relative z-10 portfolio-content flex flex-col items-center justify-center text-center" style="display:none;">
+    <!-- About Section -->
+    <section class="mb-10 animate-fade-in-up flex flex-col items-center justify-center text-center w-full" id="about" style="position:relative;">
+      <span class="section-bg-float" style="top:10%;left:60%;width:120px;height:120px;background:radial-gradient(circle,#6366f1 60%,#06b6d4 100%);"></span>
+      <h2 class="section-heading mb-2 flex items-center justify-center text-center w-full"><span class="material-icons mr-2">person</span>About</h2>
+      <div class="bg-white bg-opacity-90 rounded-lg p-4 shadow card text-gray-900 mx-auto">
+        <p class="mb-4">Passionate 3rd-year Computer Science student with a strong foundation in Flutter, React, and backend technologies like Supabase and Spring Boot. Adept at design thinking and problem-solving to deliver innovative solutions. Experienced in internships and impactful projects, with a proven track record of successful team collaboration and timely project delivery. Eager to apply my skills to real-world challenges.</p>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div>
+            <h3 class="section-heading-sm mb-1 flex items-center"><span class="material-icons mr-1">star</span>Strengths</h3>
+            <ul class="list-disc ml-6">
+              <li>Problem Solving</li>
+              <li>Creativity</li>
+              <li>Database Management</li>
+              <li>Web Development</li>
+              <li>Critical Thinking</li>
+              <li>Programming</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="section-heading-sm mb-1 flex items-center"><span class="material-icons mr-1">language</span>Languages</h3>
+            <ul class="list-disc ml-6">
+              <li>Tamil (Native)</li>
+              <li>English (Proficient)</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="section-heading-sm mb-1 flex items-center"><span class="material-icons mr-1">build</span>Skills</h3>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <span class="bg-blue-200 text-blue-900 px-3 py-1 rounded-full text-sm font-semibold">APIs</span>
+              <span class="bg-green-200 text-green-900 px-3 py-1 rounded-full text-sm font-semibold">AWS</span>
+              <span class="bg-yellow-200 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold">Cloud</span>
+              <span class="bg-purple-200 text-purple-900 px-3 py-1 rounded-full text-sm font-semibold">DBMS</span>
+              <span class="bg-pink-200 text-pink-900 px-3 py-1 rounded-full text-sm font-semibold">Flutter</span>
+              <span class="bg-red-200 text-red-900 px-3 py-1 rounded-full text-sm font-semibold">Java</span>
+              <span class="bg-teal-200 text-teal-900 px-3 py-1 rounded-full text-sm font-semibold">MongoDB</span>
+              <span class="bg-indigo-200 text-indigo-900 px-3 py-1 rounded-full text-sm font-semibold">Python</span>
+              <span class="bg-orange-200 text-orange-900 px-3 py-1 rounded-full text-sm font-semibold">Spring Boot</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr class="my-6 border-t-2 border-blue-300 opacity-50">
+    <!-- Projects Section -->
+    <section class="mb-10 animate-fade-in-up flex flex-col items-center justify-center text-center w-full" id="projects" style="position:relative;">
+      <span class="section-bg-float" style="top:25%;left:15%;width:100px;height:100px;background:radial-gradient(circle,#f59e42 60%,#6366f1 100%);"></span>
+      <h2 class="section-heading mb-2 flex items-center justify-center text-center w-full"><span class="material-icons mr-2">apps</span>Projects</h2>
+      <div class="grid md:grid-cols-2 gap-6 mb-6 justify-center">
+        <div class="bg-white bg-opacity-90 rounded-lg p-4 shadow card text-gray-900 mx-auto">
+          <h3 class="section-heading-sm">Crop Monitoring App</h3>
+          <p>Developed a Flutter and Supabase-based app to monitor crop health and notify users.</p>
+        </div>
+        <div class="bg-white bg-opacity-90 rounded-lg p-4 shadow card text-gray-900 mx-auto">
+          <h3 class="section-heading-sm">Safe Mine Log</h3>
+          <p>Created a safety app utilizing Flutter and OpenAI APIs for real-time interaction and safety chatbots.</p>
+        </div>
+        <div class="bg-white bg-opacity-90 rounded-lg p-4 shadow card text-gray-900 mx-auto">
+          <h3 class="section-heading-sm">SOS Alert Web App</h3>
+          <p>Developed a real-time web application for tracking SOS signals using React and Supabase.</p>
+        </div>
+        <div class="bg-white bg-opacity-90 rounded-lg p-4 shadow card text-gray-900 mx-auto">
+          <h3 class="section-heading-sm">Carbon Footprint Tracker</h3>
+          <p>Built a project to analyze and track individual carbon footprints in sectors like food and transportation.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Certifications Section -->
+    <section class="mb-10 animate-fade-in-up flex flex-col items-center justify-center text-center w-full" id="certifications" style="position:relative;">
+      <span class="section-bg-float" style="top:30%;left:10%;width:100px;height:100px;background:radial-gradient(circle,#f59e42 60%,#6366f1 100%);"></span>
+      <h2 class="section-heading mb-2 flex items-center justify-center text-center w-full"><span class="material-icons mr-2">verified</span>Certifications</h2>
+      <div class="bg-white bg-opacity-90 rounded-lg p-4 shadow card text-gray-900 mx-auto flex flex-col gap-2">
+        <div><b>AWS Cloud Architect</b> – Cloud computing certification focused on architecting solutions using AWS.</div>
+        <div><b>AWS Cloud Foundation</b> – Foundation level certification for AWS cloud services.</div>
+        <div><b>Google Foundations in Google Skillboost</b> – Certification covering foundational skills in Google services.</div>
+        <div><b>Java, Python Programming in NPTEL</b> – Online programming courses focusing on Java and Python.</div>
+        <div><b>Introduction to IoT (NPTEL)</b> – Completed exam and coursework on Internet of Things fundamentals.</div>
+        <div><b>MongoDB Introduction</b> – Introduction to MongoDB database management system.</div>
+        <div><b>DBMS in Infosys</b> – Database management systems training provided by Infosys.</div>
+      </div>
+    </section>
+    <hr class="my-6 border-t-2 border-green-300 opacity-50">
+    <!-- Experience Section -->
+    <section class="mb-10 animate-fade-in-up flex flex-col items-center justify-center text-center w-full" id="experience" style="position:relative;">
+      <span class="section-bg-float" style="top:60%;left:80%;width:90px;height:90px;background:radial-gradient(circle,#06b6d4 60%,#f59e42 100%);"></span>
+      <h2 class="section-heading mb-2 flex items-center justify-center text-center w-full"><span class="material-icons mr-2">work</span>Experience</h2>
+      <div class="relative flex flex-col items-center w-full max-w-2xl mx-auto">
+        <!-- Roadmap vertical line -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-sky-400 via-emerald-300 to-yellow-300 opacity-60 z-0"></div>
+        <!-- Roadmap nodes -->
+        <div class="relative z-10 flex flex-col gap-12 w-full">
+          <!-- Node 1 -->
+          <div class="flex flex-col items-center group animate-fade-in-up">
+            <div class="flex items-center gap-3">
+              <span class="material-icons text-3xl text-sky-400 bg-white rounded-full shadow p-2">code</span>
+              <div class="bg-white bg-opacity-90 rounded-lg p-4 shadow card text-gray-900 mx-auto text-left min-w-[260px] max-w-md">
+                <h3 class="section-heading-sm">Java Development Intern <span class="text-blue-500">@ StableCode</span></h3>
+                <p class="text-sm text-gray-600 mb-1">Remote | 06/2025 – 07/2025</p>
+                <ul class="list-disc ml-6 text-left">
+                  <li>Developed Java-based applications, focusing on backend logic and API integration.</li>
+                  <li>Improved application performance and reliability through code optimization.</li>
+                  <li>Collaborated with senior developers and participated in code reviews.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Node 2 -->
+          <div class="flex flex-col items-center group animate-fade-in-up">
+            <div class="flex items-center gap-3">
+              <span class="material-icons text-3xl text-emerald-400 bg-white rounded-full shadow p-2">devices</span>
+              <div class="bg-white bg-opacity-90 rounded-lg p-4 shadow card text-gray-900 mx-auto text-left min-w-[260px] max-w-md">
+                <h3 class="section-heading-sm">Intern <span class="text-blue-500">@ Codibind Technologies</span></h3>
+                <p class="text-sm text-gray-600 mb-1">Chennai, Tamil Nadu | 06/2024 – 07/2024</p>
+                <ul class="list-disc ml-6 text-left">
+                  <li>Developed front-end features using Flutter, enhancing user experience.</li>
+                  <li>Collaborated with a team to deliver projects ahead of deadlines.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Node 3 -->
+          <div class="flex flex-col items-center group animate-fade-in-up">
+            <div class="flex items-center gap-3">
+              <span class="material-icons text-3xl text-yellow-400 bg-white rounded-full shadow p-2">cloud</span>
+              <div class="bg-white bg-opacity-90 rounded-lg p-4 shadow card text-gray-900 mx-auto text-left min-w-[260px] max-w-md">
+                <h3 class="section-heading-sm">Intern <span class="text-blue-500">@ Kashiv Infotech</span></h3>
+                <p class="text-sm text-gray-600 mb-1">Remote | 01/2025 – 02/2025</p>
+                <ul class="list-disc ml-6 text-left">
+                  <li>Programmed in Java to build scalable applications, improving performance by 15%.</li>
+                  <li>Participated in code reviews and contributed to team discussions.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Node 4 -->
+          <div class="flex flex-col items-center group animate-fade-in-up">
+            <div class="flex items-center gap-3">
+              <span class="material-icons text-3xl text-pink-400 bg-white rounded-full shadow p-2">smartphone</span>
+              <div class="bg-white bg-opacity-90 rounded-lg p-4 shadow card text-gray-900 mx-auto text-left min-w-[260px] max-w-md">
+                <h3 class="section-heading-sm">Intern <span class="text-blue-500">@ Codsoft</span></h3>
+                <p class="text-sm text-gray-600 mb-1">Remote | 01/2022 – 12/2022</p>
+                <ul class="list-disc ml-6 text-left">
+                  <li>Designed and developed web and mobile application solutions.</li>
+                  <li>Successfully completed multiple app development projects on time.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr class="my-6 border-t-2 border-pink-300 opacity-50">
+    <!-- Contact Section -->
+    <section class="mb-10 animate-fade-in-up flex flex-col items-center justify-center text-center w-full" id="contact" style="position:relative;">
+      <span class="section-bg-float" style="top:50%;left:20%;width:80px;height:80px;background:radial-gradient(circle,#6366f1 60%,#f59e42 100%);"></span>
+      <h2 class="section-heading mb-2 flex items-center justify-center text-center w-full"><span class="material-icons mr-2">mail</span>Contact</h2>
+      <form class="bg-white bg-opacity-90 rounded-lg p-6 shadow card max-w-xl w-full mx-auto text-gray-900" id="contactForm" autocomplete="off">
+        <div class="mb-4">
+          <label for="name" class="block font-semibold mb-1">Name</label>
+          <input type="text" id="name" name="name" required class="w-full px-3 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block font-semibold mb-1">Email</label>
+          <input type="email" id="email" name="email" required class="w-full px-3 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block font-semibold mb-1">Message</label>
+          <textarea id="message" name="message" rows="4" required class="w-full px-3 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-green-400 text-white px-6 py-2 rounded-full font-bold text-lg hover:scale-105 transition-transform">Send Message</button>
+        <p id="formStatus" class="mt-3 text-center text-green-600 font-semibold hidden">Your message has been sent!</p>
+      </form>
+    </section>
+    <!-- Connect Section -->
+    <section class="mb-10 animate-fade-in-up flex flex-col items-center justify-center text-center w-full" id="connect" style="position:relative;">
+      <span class="section-bg-float" style="top:20%;left:70%;width:100px;height:100px;background:radial-gradient(circle,#06b6d4 60%,#f59e42 100%);"></span>
+      <h2 class="section-heading mb-2 flex items-center justify-center text-center w-full"><span class="material-icons mr-2">link</span>Connect</h2>
+      <div class="flex flex-wrap gap-4 justify-center items-center w-full">
+        <a href="mailto:Aanto.Selvan@gmail.com" class="connect-link"><span class="material-icons mr-1">email</span>Email</a>
+        <a href="tel:+917010704420" class="connect-link"><span class="material-icons mr-1">call</span>Phone</a>
+        <a href="https://www.linkedin.com/in/aanto-s-93920b263/" target="_blank" class="connect-link"><span class="material-icons mr-1"></span>LinkedIn</a>
+        <a href="https://github.com/Aanto2004" target="_blank" class="connect-link"><span class="material-icons mr-1">code</span>GitHub</a>
+      </div>
+      <div class="flex justify-center mt-4 w-full">
+        <div class="connect-link flex items-center justify-center w-auto mx-auto" style="background:linear-gradient(135deg,#f59e42 40%,#6366f1 100%);min-width:180px;max-width:320px;">
+          <span class="material-icons mr-2">location_on</span>
+          Paramakudi, Tamil Nadu
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer with bottom nav links -->
+  <footer class="text-center py-6 text-white bg-black bg-opacity-30 mt-10 animate-fade-in-up relative z-10">
+    &copy; 2024 Aanto S. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+  <div class="right-animated-bg"></div>
+</body>
+</html> 
